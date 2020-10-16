@@ -22,7 +22,18 @@ def valor_carta (x, y):
 
   else:
     return int(x[y])
+ 
 
+def quantidade_de_baralhos(X):
+  Q = input ('Com quantos baralhos você deseja jogar?''\n 1, 6 ou 8\n')
+  if Q == '6':
+    X *= 6
+  elif Q == '8':
+    X *= 8
+  else:
+    X = X
+  return X
+    
 # Jogo:
 while fichas>0:
 
@@ -49,6 +60,7 @@ while fichas>0:
   cartas=['A', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K']
   cartas*=4
   
+  cartas = quantidade_de_baralhos(cartas)
   pontos_jogador=0
   pontos_banco=0
   
