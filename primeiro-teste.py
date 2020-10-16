@@ -22,10 +22,8 @@ def valor_carta (x, y):
 
   else:
     return int(x[y])
-
-# Jogo:
-while fichas>0:
-
+  
+def apostas_por_jogador (aposta)
   # Valor da aposta:
   aposta=int(input('Faça sua aposta: '))
 
@@ -36,6 +34,10 @@ while fichas>0:
   while aposta>fichas:
     print('Valor inválido')
     aposta=int(input('Faça sua aposta: '))
+    
+    return apostas
+
+def escolha_por_jogador (escolha)
 
   # Local da aposta:
   escolha=input('Escolha entre "Jogador", "Banco" ou "Empate": ')
@@ -44,6 +46,23 @@ while fichas>0:
   while escolha!='Jogador' and escolha!='Banco' and escolha!='Empate':
     print('Escolha inválida')
     escolha=input('Escolha entre "Jogador", "Banco" ou "Empate": ')
+    
+    return escolha
+# Jogo:
+while fichas>0:
+  #quantos jogadores
+  quantidade_de_jogadores= int(input ('Quantas pessoas vão apostar?'))
+  jogadores=[]*quantidade_de_jogadores
+  apostas_dos_jogadores=[]*quantidade_de_jogadores
+  escolha_dos jogadores=[]*quantidade_de_jogadores
+  i=0
+  
+  #apostas e escolhas por jogador
+  while i < len(jogadores):
+    print ('jogador {0}', i)
+    apostas_dos_jogadores[i] = apostas_por_jogador (aposta)
+    escolha_por_jogador[i] = escolha_por_jogador (escolha)
+    i+=1
 
   # Cartas:
   cartas=['A', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K']
@@ -126,6 +145,8 @@ while fichas>0:
     vitoria='Empate'
 
     # Pagamento das apostas:
+    
+    #colocar while para cada jogador
   if escolha=='Jogador':
     if vitoria=='Jogador':
       fichas+=aposta
