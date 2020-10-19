@@ -86,7 +86,7 @@ def jogo():
         print('\nNome jogador {}: {}\nFichas jogador {}: {}\n'.format(i, nome, i, fichas)) # Printando resultados obtidos
         lista_jogadores.append(nome)
         lista_fichas.append(fichas)
-        jogadores=input('Digite "iniciar" para começar o jogo ou digite qualquer bosta para adicionar mais um jogador: ')
+        jogadores=input('Digite "iniciar" para começar o jogo ou digite qualquer outra coisa para adicionar mais um jogador: ')
         i+=1
     
     # Quantidade de baralhos:
